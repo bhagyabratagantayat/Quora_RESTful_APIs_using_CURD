@@ -1,21 +1,25 @@
 const express = require("express");
 const app = express();
 
-const port =YOUR_PORT;
+const port =process.env.YOUR_PORT || 3000;
 
 // fake data base made by pilu 
 let posts = [
     {
         username: "pilubhai",
-        Content: "hello this is a Quora "
+        Content: "hello this is a Quora. posted by pilu "
     },
     {
         username: "bulubhai",
-        Content: "hello this is a Quora "
+        Content: "hello this is bulu . "
     },
     {
         username: "becians",
-        Content: "hello this is a Quora "
+        Content: "i am from bec college. "
+    },
+    {
+        username: "giftian",
+        Content: "i am from gift college. "
     }
 ]
 
@@ -44,6 +48,7 @@ app.use(express.static(path.join(__dirname, "public")));
 app.get("/posts", (req, res) => {
     res.render("index.ejs", { posts });
 })
+
 
 app.listen(port, (req, res) => {
     console.log(`listening port ${port}.`);
