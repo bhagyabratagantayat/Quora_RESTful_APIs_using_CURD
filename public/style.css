@@ -5,7 +5,7 @@ h1{
 }
 .post{
     background-color: rgb(213, 192, 185);
-    height: 20vh;
+    height: auto;
     color: black;
 }
 .username{

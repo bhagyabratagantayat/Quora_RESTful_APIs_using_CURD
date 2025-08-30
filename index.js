@@ -1,5 +1,8 @@
 const express = require("express");
 const app = express();
+require("dotenv").config();
+
+
 
 const port =process.env.YOUR_PORT || 3000;
 
@@ -56,8 +59,8 @@ app.get("/posts/new", (req, res) => {
 app.post("/posts", (req, res) => {
     let  {username, Content} = req.body;
     posts.push({username, Content});
-    console.log(req.body);
-    res.send("post req sent. It working");
+    // console.log(req.body); // for printing terminal or bash
+    res.redirect("/posts");
 })
 
 app.listen(port, (req, res) => {
