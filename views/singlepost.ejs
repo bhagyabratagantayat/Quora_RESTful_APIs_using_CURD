@@ -7,11 +7,11 @@
     <link rel="stylesheet" href="/style.css">
 </head>
 <body>
-    <h2>Here the post in datails</h2>
-    <h3>post id:<%= id = post.id %></h3>
+    <h2>Here the post datails</h2>
+    <h4>post id:<%= id = post.id %></h4>
     <div class="post">
         <h2 class="username">@<%= post.username %></h2>
-        <h4 class="Content">@<%= post.Content %></h4>
+        <h4 class="Content"><%= post.Content %></h4>
         <a href="http://localhost:<%= process.env.YOUR_PORT || port%>/posts">go back</a>
     </div>
     
