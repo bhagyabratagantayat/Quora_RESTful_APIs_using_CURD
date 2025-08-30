@@ -9,18 +9,22 @@ const port =process.env.YOUR_PORT || 3000;
 // fake data base made by pilu 
 let posts = [
     {
+        id:"1a",
         username: "pilubhai",
-        Content: "hello this is a Quora. posted by pilu "
+        Content: "hello bachoo Good Morning."
     },
     {
+        id:"2b",
         username: "bulubhai",
         Content: "hello this is bulu . "
     },
     {
+        id:"3c",
         username: "becians",
         Content: "i am from bec college. "
     },
     {
+        id:"4d",
         username: "giftian",
         Content: "i am from gift college. "
     }
@@ -61,6 +65,12 @@ app.post("/posts", (req, res) => {
     posts.push({username, Content});
     // console.log(req.body); // for printing terminal or bash
     res.redirect("/posts");
+})
+app.get("/posts/:id", (req, res) => {
+    let {id} = req.params;
+    let post = posts.find((p) => id === p.id);
+    // console.log(post); // for print id
+    res.render("singlepost.ejs", {post})
 })
 
 app.listen(port, (req, res) => {

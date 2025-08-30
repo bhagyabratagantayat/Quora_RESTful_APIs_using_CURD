@@ -12,8 +12,11 @@
         <div class="post">
             <h2 class="username">@<%= post.username %></h2>
             <h4 class="Content"><%= post.Content %></h4>
+            <a href="http://localhost:<%= process.env.YOUR_PORT || port%>/posts/<%=post.id%>">see post</a>
         </div>
         <% } %>
+        <br>
+        <br>
     <a href="http://localhost:<%= process.env.YOUR_PORT || port%>/posts/new">create a post</a>
     
 </body>
