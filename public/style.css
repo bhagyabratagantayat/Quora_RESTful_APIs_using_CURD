@@ -1,0 +1,18 @@
+h1{
+    color: red;
+    font-family: 'Times New Roman', Times, serif;
+    text-align: center;
+}
+.post{
+    background-color: rgb(213, 192, 185);
+    height: 20vh;
+    color: black;
+}
+.username{
+    font-style: italic;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+.content{
+    font-family: Arial, Helvetica, sans-serif;
+    font-style: normal;
+}
