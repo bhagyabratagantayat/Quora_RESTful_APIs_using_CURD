@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Quora all posts</title>
+    <title>all posts</title>
     <link rel="stylesheet" href="/style.css">
 </head>
 <body>
@@ -13,7 +13,8 @@
             <h2 class="username">@<%= post.username %></h2>
             <h4 class="content"><%= post.content %></h4>
             <a href="http://localhost:<%= process.env.YOUR_PORT || port%>/posts/<%=post.id%>">see post</a>  &nbsp;
-            <a href="http://localhost:<%= process.env.YOUR_PORT || port%>/posts/<%=post.id%>/edit">Edit post</a>
+            <a href="http://localhost:<%= process.env.YOUR_PORT || port%>/posts/<%=post.id%>/edit">Edit post</a> &nbsp;
+            <form action="/posts/<%=post.id%>?_method=DELETE" method="post"><button>delete</button></form>
         </div>
         <% } %>
         <br>

@@ -81,6 +81,16 @@ app.get("/posts/:id/edit", (req, res) => {
   res.render("edit.ejs", { post });
 });
 
+app.delete("/posts/:id", (req, res) => {
+    let { id } = req.params;
+    posts = posts.filter((p) => id !== p.id);
+    // res.send("dlt sccess");
+    res.redirect("/posts");
+
+
+
+})
+
 
 app.listen(port, (req, res) => {
   console.log(`listening port ${port}.`);
