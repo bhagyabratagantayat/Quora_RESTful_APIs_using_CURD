@@ -11,13 +11,13 @@
     <% for(post of posts) { %>
         <div class="post">
             <h2 class="username">@<%= post.username %></h2>
-            <h4 class="Content"><%= post.Content %></h4>
-            <a href="http://localhost:<%= process.env.YOUR_PORT || port%>/posts/<%=post.id%>">see post</a>
+            <h4 class="content"><%= post.content %></h4>
+            <a href="http://localhost:<%= process.env.YOUR_PORT || port%>/posts/<%=post.id%>">see post</a>  &nbsp;
+            <a href="http://localhost:<%= process.env.YOUR_PORT || port%>/posts/<%=post.id%>/edit">Edit post</a>
         </div>
         <% } %>
         <br>
         <br>
-    <a href="http://localhost:<%= process.env.YOUR_PORT || port%>/posts/new">create a post</a>
-    
+    <a href="http://localhost:<%= process.env.YOUR_PORT || port%>/posts/new">create a post</a>    
 </body>
 </html>
